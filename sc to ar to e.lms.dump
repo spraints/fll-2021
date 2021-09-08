@@ -1,0 +1,21 @@
+target: Stage
+target: 11SBBxOc3DIMCPWgxWVp
+  ----- Elndd4Gw-aZBfuOcobMO -----
+  when program starts:
+    move(direction: forward, cm: -53.5)
+  ----- oh6)sb/$n?mXP]lkVniG -----
+  move(direction: counterclockwise, degrees: 90)
+  move(direction: forward, cm: -32)
+  ----- tiK+hy4Lrnt@34g.o[{U -----
+  whenPressed(port: A, is: pressed):
+    wait(duration: 2)
+    move(direction: clockwise, degrees: 90)
+    move(direction: forward, cm: -45)
+    move(direction: clockwise, degrees: 135)
+    move(direction: forward, cm: -25)
+    move(direction: counterclockwise, degrees: 45)
+    move(direction: forward, cm: -22)
+    move(direction: counterclockwise, degrees: 90)
+    move(direction: forward, cm: -15)
+    move(direction: clockwise, degrees: 90)
+    move(direction: forward, cm: -8)
