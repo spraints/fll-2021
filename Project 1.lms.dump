@@ -1,0 +1,19 @@
+target: Stage
+target: tcHOvPr4vjkS1VCg_7n-
+  ----- ({gex5Q|l2.pz]+qJ_Z+ -----
+  setMovementSpeed(speed: 100)
+  ----- 8]$T/tb/+6?EKFyXQaX@ -----
+  move(direction: forward, cm: 75)
+  ----- lKzZHrsd1MZc2CMM9lvc -----
+  when program starts:
+    resetYaw()
+    moveSteer(steering: -5, cm: 75)
+    setMotorSpeed(port: A, speed: 5)
+    until (orientation(yaw) > "-2"):
+      motorStartDirection(direction: counterclockwise, port: A)
+    stopMotor(port: A)
+    stop(program)
+  ----- |.Vn7n:$%L0/Jr#_=?Q` -----
+  move(direction: forward, cm: 110)
+  move(direction: counterclockwise, degrees: 150)
+  move(direction: forward, cm: 17)
