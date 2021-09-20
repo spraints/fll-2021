@@ -2,17 +2,42 @@ target: Stage
 target: tcHOvPr4vjkS1VCg_7n-
   ----- ({gex5Q|l2.pz]+qJ_Z+ -----
   setMovementSpeed(speed: 100)
-  ----- 8]$T/tb/+6?EKFyXQaX@ -----
+  ----- -O*^z-ooN^U|~XP*7Dje -----
+  ("" == "0")----- 8]$T/tb/+6?EKFyXQaX@ -----
   move(direction: forward, cm: 75)
+  ----- O]jZh|HYTBzxy?:@.NSq -----
+  motorTurnForDirection(direction: clockwise, port: B, degrees: -110)
+  ----- RK3y}R5H_h.:2h3:rv(` -----
+  goToPosition(port: D, position: 210, direction: shortest)
+  ----- l/?2n?S[_!esTOrnm[d} -----
+  stop(program)
   ----- lKzZHrsd1MZc2CMM9lvc -----
   when program starts:
     resetYaw()
-    moveSteer(steering: -5, cm: 75)
+    goToPosition(port: E, position: 0, direction: shortest)
+    moveSteer(steering: -2, cm: 55)
+    setMotorSpeed(port: D, speed: 100)
+    goToPosition(port: D, position: 250, direction: shortest)
+    goToPosition(port: D, position: 210, direction: shortest)
     setMotorSpeed(port: A, speed: 5)
     until (orientation(yaw) > "-2"):
       motorStartDirection(direction: counterclockwise, port: A)
     stopMotor(port: A)
-    stop(program)
+    moveSteer(steering: 0, cm: 12)
+    motorTurnForDirection(direction: counterclockwise, port: A, degrees: 180)
+    setMovementSpeed(speed: 30)
+    until (reflectivity(port: F) < 40):
+      startMoveSteer(steering: 0)
+    stopMove()
+    motorTurnForDirection(direction: counterclockwise, port: E, degrees: 100)
+    goToPosition(port: E, position: 0, direction: shortest)
+    move(direction: forward, cm: 10)
+    setMotorSpeed(port: B, speed: 50)
+    until (orientation(yaw) < "20"):
+      motorStartDirection(direction: clockwise, port: B)
+    stopMotor(port: B)
+    setMovementSpeed(speed: 50)
+    move(direction: forward, seconds: 1)
   ----- |.Vn7n:$%L0/Jr#_=?Q` -----
   move(direction: forward, cm: 110)
   move(direction: counterclockwise, degrees: 150)
