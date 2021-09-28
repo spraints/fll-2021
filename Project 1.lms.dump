@@ -42,3 +42,6 @@ target: tcHOvPr4vjkS1VCg_7n-
   move(direction: forward, cm: 110)
   move(direction: counterclockwise, degrees: 150)
   move(direction: forward, cm: 17)
+  ----- |0pf?uUbDCR9ES+TG|c* -----
+  move(direction: back, cm: 20)
+  move(direction: counterclockwise, cm: 20)

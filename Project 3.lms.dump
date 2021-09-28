@@ -1,0 +1,12 @@
+target: Stage
+target: YD1AE84raZc8rudM33m_
+  ----- +@ElXtZ6#)g1k;~NbI!Y -----
+  move(direction: forward, cm: )
+  ----- uRTl6iaiqkHg7G186SBr -----
+  when program starts:
+    setMovementSpeed(speed: 50)
+    until (reflectivity(port: F) < 50):
+      startMoveSteer(steering: 0)
+    stopMove()
+  ----- {oO(}49(p^6TjgvNZoQW -----
+  move(direction: forward, cm: 26)
