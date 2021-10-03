@@ -1,0 +1,53 @@
+target: Stage
+target: tcHOvPr4vjkS1VCg_7n-
+  ----- ,@TEflA`T;_`R)Zll%)Y -----
+  def GyroMoveForward %s ["degrees"]
+    setDegreesCounted(port: A, value: 0)
+    _GyroRampInit [](.M;%Ykg05bW|(p-8GcKq: )
+    until (motorPosition(port: A) < (45 - degrees)):
+      _GyroRampUp %s ["`~nJ{lKNAW!O3BOnlR~6"](`~nJ{lKNAW!O3BOnlR~6: "A")
+      startMoveSteer(steering: 0)
+    stopMove()
+  ----- -0578%Q[,!x]GT}aaQSj -----
+  A----- 77KeC;k4Xpbme(1J$[WM -----
+  def _GyroRampDown %s ["motor"]
+    if ("0" < [variable _GyroRampSpeed]):
+      _GyroRampSpeed = _GyroRampSpeed + -5
+      setMotorSpeed(port: motor, speed: [variable _GyroRampSpeed])
+      setMovementSpeed(speed: [variable _GyroRampSpeed])
+  ----- DmP+tf{U:xenRSw[jC0N -----
+  A----- JOJjpQYoi-@?0,i$S2=? -----
+  def GyroTurnLeft %s ["degrees"]
+    resetYaw()
+    _GyroRampInit []()
+    [variable _GyroRampSpeed] = "40"
+    setMotorSpeed(port: A, speed: 40)
+    motorStartDirection(direction: clockwise, port: A)
+    wait until: ((43 - degrees) > orientation(yaw))
+    until ((0 - degrees) > orientation(yaw)):
+      _GyroRampDown %s ["}HBb2BvYqa(aotG0BGmv"](}HBb2BvYqa(aotG0BGmv: "A")
+      motorStartDirection(direction: clockwise, port: A)
+    stopMotor(port: A)
+  ----- QvJ3.i9x++m_?g(JqYmu -----
+  motor----- Tl{3nD1/~^;se%Xq#o_V -----
+  def GyroTurnRight %s ["degrees"]
+    resetYaw()
+    _GyroRampInit []()
+    [variable _GyroRampSpeed] = "40"
+    setMotorSpeed(port: B, speed: 40)
+    motorStartDirection(direction: counterclockwise, port: B)
+    wait until: (orientation(yaw) > (degrees - 40))
+    until (orientation(yaw) > degrees):
+      _GyroRampDown %s ["}HBb2BvYqa(aotG0BGmv"](}HBb2BvYqa(aotG0BGmv: "B")
+      motorStartDirection(direction: counterclockwise, port: B)
+    stopMotor(port: B)
+  ----- Z$qVZU|;S1~9*NOs3#=h -----
+  (0 - )----- _phVN1)H,~@*lWup.phb -----
+  def _GyroRampInit []
+    [variable _GyroRampSpeed] = "0"
+  ----- huI0[P*#tjwXc=sP^Hd] -----
+  def _GyroRampUp %s ["motor"]
+    if ([variable _GyroRampSpeed] < [variable _GyroRampMaxSpeed]):
+      _GyroRampSpeed = _GyroRampSpeed + 5
+      setMotorSpeed(port: motor, speed: [variable _GyroRampSpeed])
+      setMovementSpeed(speed: [variable _GyroRampSpeed])
