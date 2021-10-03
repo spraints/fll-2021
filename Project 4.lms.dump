@@ -1,0 +1,17 @@
+target: Stage
+target: tmJIbSjAU-aV8xt4Prf9
+  ----- YYLK3jdTtNKQ0qa2cG4w -----
+  when program starts:
+    setMotorSpeed(port: A, speed: 20)
+    setMotorSpeed(port: B, speed: 20)
+    [variable motor a] = motorAbsolutePosition(port: A)
+    [variable motor b] = motorAbsolutePosition(port: B)
+    [variable angle] = (motorAbsolutePosition(port: A) - motorAbsolutePosition(port: B))
+    startMoveSteer(steering: 0)
+    forever:
+      if ((([variable motor a] - [variable motor b]) - [variable angle]) > "0"):
+        setMotorSpeed(port: B, speed: (motorSpeed(port: B) + 1))
+      else:
+        setMotorSpeed(port: A, speed: (motorSpeed(port: A) + 1))
+  ----- gouvP@S]yB!mCLEZb2(W -----
+  moveSteer(steering: 0, seconds: 5)
