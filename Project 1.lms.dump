@@ -1,7 +1,5 @@
 target: Stage
 target: tcHOvPr4vjkS1VCg_7n-
-  ----- ({gex5Q|l2.pz]+qJ_Z+ -----
-  setMovementSpeed(speed: 100)
   ----- ,@TEflA`T;_`R)Zll%)Y -----
   def GyroMoveForward %s ["degrees"]
     setDegreesCounted(port: A, value: 0)
@@ -11,33 +9,40 @@ target: tcHOvPr4vjkS1VCg_7n-
       startMoveSteer(steering: 0)
     stopMove()
   ----- -0578%Q[,!x]GT}aaQSj -----
-  A----- -O*^z-ooN^U|~XP*7Dje -----
-  ("" == "0")----- 2C.hJR8~5FESInjTfyt2 -----
-  GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "720")
-  ----- 8]$T/tb/+6?EKFyXQaX@ -----
-  move(direction: forward, cm: 75)
-  ----- JOJjpQYoi-@?0,i$S2=? -----
+  A----- 77KeC;k4Xpbme(1J$[WM -----
+  def _GyroRampDown %s ["motor"]
+    if ("0" < [variable _GyroRampSpeed]):
+      _GyroRampSpeed = _GyroRampSpeed + -5
+      setMotorSpeed(port: motor, speed: [variable _GyroRampSpeed])
+      setMovementSpeed(speed: [variable _GyroRampSpeed])
+  ----- DmP+tf{U:xenRSw[jC0N -----
+  A----- JOJjpQYoi-@?0,i$S2=? -----
   def GyroTurnLeft %s ["degrees"]
     resetYaw()
     _GyroRampInit []()
-    until ((10 - degrees) > orientation(yaw)):
-      _GyroRampUp %s ["`~nJ{lKNAW!O3BOnlR~6"](`~nJ{lKNAW!O3BOnlR~6: "A")
+    [variable _GyroRampSpeed] = "40"
+    setMotorSpeed(port: A, speed: 40)
+    motorStartDirection(direction: clockwise, port: A)
+    wait until: ((43 - degrees) > orientation(yaw))
+    until ((0 - degrees) > orientation(yaw)):
+      _GyroRampDown %s ["}HBb2BvYqa(aotG0BGmv"](}HBb2BvYqa(aotG0BGmv: "A")
       motorStartDirection(direction: clockwise, port: A)
     stopMotor(port: A)
-  ----- O]jZh|HYTBzxy?:@.NSq -----
-  motorTurnForDirection(direction: clockwise, port: B, degrees: -110)
   ----- QvJ3.i9x++m_?g(JqYmu -----
-  motor----- RK3y}R5H_h.:2h3:rv(` -----
-  goToPosition(port: D, position: 210, direction: shortest)
-  ----- Tl{3nD1/~^;se%Xq#o_V -----
+  motor----- Tl{3nD1/~^;se%Xq#o_V -----
   def GyroTurnRight %s ["degrees"]
     resetYaw()
     _GyroRampInit []()
-    until (orientation(yaw) > (degrees - 10)):
-      _GyroRampUp %s ["`~nJ{lKNAW!O3BOnlR~6"](`~nJ{lKNAW!O3BOnlR~6: "B")
-      motorStartDirection(direction: clockwise, port: B)
+    [variable _GyroRampSpeed] = "40"
+    setMotorSpeed(port: B, speed: 40)
+    motorStartDirection(direction: counterclockwise, port: B)
+    wait until: (orientation(yaw) > (degrees - 40))
+    until (orientation(yaw) > degrees):
+      _GyroRampDown %s ["}HBb2BvYqa(aotG0BGmv"](}HBb2BvYqa(aotG0BGmv: "B")
+      motorStartDirection(direction: counterclockwise, port: B)
     stopMotor(port: B)
-  ----- _phVN1)H,~@*lWup.phb -----
+  ----- Z$qVZU|;S1~9*NOs3#=h -----
+  (0 - )----- _phVN1)H,~@*lWup.phb -----
   def _GyroRampInit []
     [variable _GyroRampSpeed] = "0"
   ----- huI0[P*#tjwXc=sP^Hd] -----
@@ -46,8 +51,6 @@ target: tcHOvPr4vjkS1VCg_7n-
       _GyroRampSpeed = _GyroRampSpeed + 5
       setMotorSpeed(port: motor, speed: [variable _GyroRampSpeed])
       setMovementSpeed(speed: [variable _GyroRampSpeed])
-  ----- l/?2n?S[_!esTOrnm[d} -----
-  stop(program)
   ----- lKzZHrsd1MZc2CMM9lvc -----
   when program starts:
     [variable _GyroRampMaxSpeed] = "40"
@@ -77,8 +80,6 @@ target: tcHOvPr4vjkS1VCg_7n-
     stopMotor(port: B)
     setMovementSpeed(speed: 50)
     move(direction: forward, seconds: 1)
-  ----- {4Go[mDbi+z-q5{@2l.) -----
-  GyroTurnLeft %s ["ps6|qDX7/ZypQ,1.q~?E"](ps6|qDX7/ZypQ,1.q~?E: "90")
   ----- |0pf?uUbDCR9ES+TG|c* -----
   move(direction: back, cm: 20)
   move(direction: counterclockwise, cm: 20)
