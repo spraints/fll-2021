@@ -1,5 +1,11 @@
 target: Stage
 target: tcHOvPr4vjkS1VCg_7n-
+  ----- +YbKZ7YB],U)D{U8PPPO -----
+  when program starts:
+    [variable _GyroRampMaxSpeed] = "40"
+    GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "500")
+    GyroTurnRight %s ["%lB30BGW|Lr-#Y)]6@i("](%lB30BGW|Lr-#Y)]6@i(: "90")
+    GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "1380")
   ----- ,@TEflA`T;_`R)Zll%)Y -----
   def GyroMoveForward %s ["degrees"]
     setDegreesCounted(port: A, value: 0)
