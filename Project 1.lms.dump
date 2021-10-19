@@ -43,14 +43,6 @@ target: tcHOvPr4vjkS1VCg_7n-
   ----- _phVN1)H,~@*lWup.phb -----
   def _GyroRampInit []
     [variable _GyroRampSpeed] = "0"
-  ----- g]NZKVNq|9mZDXF1Nr51 -----
-  motorStartDirection(direction: clockwise, port: E)
-  wait(duration: 0.5)
-  motorTurnForSpeed(port: A, speed: 30, degrees: -110)
-  stopMotor(port: E)
-  goToPosition(port: E, position: 0, direction: shortest)
-  motorTurnForSpeed(port: A, speed: 30, degrees: -110)
-  stop(program)
   ----- huI0[P*#tjwXc=sP^Hd] -----
   def _GyroRampUp %s ["motor"]
     if ([variable _GyroRampSpeed] < [variable _GyroRampMaxSpeed]):
@@ -77,14 +69,5 @@ target: tcHOvPr4vjkS1VCg_7n-
     until (orientation(yaw) > "-2"):
       motorStartDirection(direction: counterclockwise, port: A)
     stopMotor(port: A)
-    move(direction: forward, cm: 12)
-    motorTurnForDirection(direction: clockwise, port: B, degrees: 200)
-    move(direction: forward, seconds: 1)
-    move(direction: back, cm: 8)
-    motorTurnForSpeed(port: A, speed: 40, degrees: -100)
-    setMotorSpeed(port: E, speed: 25)
-    goToPosition(port: E, position: 0, direction: shortest)
-    motorTurnForDirection(direction: counterclockwise, port: B, degrees: 200)
-  ----- |0pf?uUbDCR9ES+TG|c* -----
-  move(direction: back, cm: 20)
-  move(direction: counterclockwise, cm: 20)
+    move(direction: back, cm: 100)
+    stop(program)
