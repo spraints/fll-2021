@@ -2,9 +2,10 @@ target: Stage
 target: DGPTq_rDKBhZB_xZ1vNU
   ----- %Vajw17,S4IlF0cXSN*S -----
   motorTurnForDirection(direction: counterclockwise, port: E, degrees: 90)
-  ----- ?REQhRp*au[K!BlRd%Fh -----
-  move(direction: forward, degrees: 270)
-  move(direction: back, degrees: 180)
+  ----- -=GB9(^LV,4)RVgG7+*U -----
+  motorTurnForDirection(direction: clockwise, port: B, degrees: 210)
+  move(direction: forward, degrees: 630)
+  ----- 6rPbb/XxN-U|Lp5I/g3F -----
   goToPosition(port: E, position: 0, direction: shortest)
   move(direction: forward, degrees: 270)
   motorTurnForDirection(direction: counterclockwise, port: E, degrees: 90)
@@ -15,6 +16,12 @@ target: DGPTq_rDKBhZB_xZ1vNU
   move(direction: back, degrees: 180)
   goToPosition(port: E, position: 0, direction: shortest)
   move(direction: forward, degrees: 1170)
+  ----- ;bnGRFh-3D~}|ktPQFfE -----
+  motorTurnForDirection(direction: counterclockwise, port: A, degrees: 90)
+  move(direction: forward, degrees: 270)
+  move(direction: back, degrees: 180)
+  ----- gy$S=iL/nEc1zugv|vY3 -----
+  motorTurnForDirection(direction: clockwise, port: E, degrees: 10)
   ----- o~aD6(0BjdYm#Tu0GeBS -----
   setDegreesCounted(port: A, value: 0)
   setDegreesCounted(port: B, value: 0)
@@ -22,6 +29,3 @@ target: DGPTq_rDKBhZB_xZ1vNU
   when program starts:
     goToPosition(port: E, position: 270, direction: shortest)
     move(direction: forward, degrees: 540)
-    motorTurnForDirection(direction: clockwise, port: B, degrees: 200)
-    move(direction: forward, degrees: 630)
-    motorTurnForDirection(direction: counterclockwise, port: A, degrees: 90)
