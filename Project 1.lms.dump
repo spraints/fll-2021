@@ -27,8 +27,7 @@ target: tcHOvPr4vjkS1VCg_7n-
       _GyroRampDown %s ["}HBb2BvYqa(aotG0BGmv"](}HBb2BvYqa(aotG0BGmv: "A")
       motorStartDirection(direction: clockwise, port: A)
     stopMotor(port: A)
-  ----- SF,cnj/}DMtsw8k#27%W -----
-  0----- Tl{3nD1/~^;se%Xq#o_V -----
+  ----- Tl{3nD1/~^;se%Xq#o_V -----
   def GyroTurnRight %s ["degrees"]
     resetYaw()
     _GyroRampInit []()

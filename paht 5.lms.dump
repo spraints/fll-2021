@@ -27,5 +27,7 @@ target: DGPTq_rDKBhZB_xZ1vNU
   setDegreesCounted(port: B, value: 0)
   ----- vdmVIJX8MUqn-vY_JwUW -----
   when program starts:
-    goToPosition(port: E, position: 270, direction: shortest)
+    goToPosition(port: E, position: 260, direction: shortest)
+    displayLEDImage(matrix: 0999090009000900090000900, for: 2)
+    displayLEDImage(matrix: 9909999099009009000909990, for: 2)
     move(direction: forward, degrees: 540)
