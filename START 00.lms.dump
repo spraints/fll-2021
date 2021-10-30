@@ -58,7 +58,7 @@ target: tcHOvPr4vjkS1VCg_7n-
     setMotorSpeed(port: D, speed: 100)
     goToPosition(port: D, position: 250, direction: shortest)
     goToPosition(port: D, position: 210, direction: shortest)
-    GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "280")
+    GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "320")
     motorTurnForDirection(direction: counterclockwise, port: A, degrees: 200)
     GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "290")
     setMovementSpeed(speed: 30)

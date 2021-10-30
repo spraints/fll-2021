@@ -34,3 +34,5 @@ target: DGPTq_rDKBhZB_xZ1vNU
   ----- whF1`o(BMjY~vZ;(nIV3 -----
   move(direction: forward, degrees: 270)
   motorTurnForDirection(direction: counterclockwise, port: E, degrees: 90)
+  ----- ~GTq/`Lb2]DyP$5-T^Q@ -----
+  stop(all)

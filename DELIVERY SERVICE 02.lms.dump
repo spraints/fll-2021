@@ -47,6 +47,7 @@ target: tcHOvPr4vjkS1VCg_7n-
     [variable _GyroRampMaxSpeed] = "40"
     GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "1380")
     move(direction: back, cm: 50)
+    stop(program)
   ----- huI0[P*#tjwXc=sP^Hd] -----
   def _GyroRampUp %s ["motor"]
     if ([variable _GyroRampSpeed] < [variable _GyroRampMaxSpeed]):
