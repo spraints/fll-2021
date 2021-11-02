@@ -11,6 +11,9 @@ target: tcHOvPr4vjkS1VCg_7n-
     stopMove()
   ----- 4%S:9r`|T+*N,uR/-HZC -----
   goToPosition(port: E, position: 0, direction: shortest)
+  motorTurnForSpeed(port: E, speed: 75, degrees: -360)
+  motorTurnForSpeed(port: E, speed: 75, degrees: 2000)
+  motorTurnForSpeed(port: E, speed: 75, degrees: 45)
   ----- 77KeC;k4Xpbme(1J$[WM -----
   def _GyroRampDown %s ["motor"]
     if ("10" < [variable _GyroRampSpeed]):
@@ -22,11 +25,20 @@ target: tcHOvPr4vjkS1VCg_7n-
     GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "2345")
     GyroTurnLeft %s ["ps6|qDX7/ZypQ,1.q~?E"](ps6|qDX7/ZypQ,1.q~?E: "45")
     GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "1120")
-    GyroTurnLeft %s ["ps6|qDX7/ZypQ,1.q~?E"](ps6|qDX7/ZypQ,1.q~?E: "45")
+    GyroTurnLeft %s ["ps6|qDX7/ZypQ,1.q~?E"](ps6|qDX7/ZypQ,1.q~?E: "40")
     GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "180")
     motorTurnForSpeed(port: E, speed: 75, degrees: -2000)
-  ----- B|sbj)G;~`z/O(!D_^9p -----
-  motorTurnForSpeed(port: E, speed: 75, degrees: -360)
+    setMovementSpeed(speed: 10)
+    move(direction: back, cm: 20)
+    motorTurnForSpeed(port: E, speed: 75, degrees: 2000)
+    GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "200")
+    GyroTurnRight %s ["%lB30BGW|Lr-#Y)]6@i("](%lB30BGW|Lr-#Y)]6@i(: "50")
+    setMovementSpeed(speed: 100)
+    move(direction: back, degrees: 900)
+    GyroTurnRight %s ["%lB30BGW|Lr-#Y)]6@i("](%lB30BGW|Lr-#Y)]6@i(: "45")
+    setMovementSpeed(speed: 100)
+    move(direction: back, degrees: 2500)
+    stop(program)
   ----- JOJjpQYoi-@?0,i$S2=? -----
   def GyroTurnLeft %s ["degrees"]
     resetYaw()
@@ -39,10 +51,6 @@ target: tcHOvPr4vjkS1VCg_7n-
       _GyroRampDown %s ["}HBb2BvYqa(aotG0BGmv"](}HBb2BvYqa(aotG0BGmv: "A")
       motorStartDirection(direction: clockwise, port: A)
     stopMotor(port: A)
-  ----- NRl)T|}.?2^Hq4#u?h-d -----
-  motorTurnForSpeed(port: E, speed: 75, degrees: 45)
-  ----- N`z?i~Pu$uU,1PFcjY}( -----
-  motorTurnForSpeed(port: E, speed: 75, degrees: 2000)
   ----- Tl{3nD1/~^;se%Xq#o_V -----
   def GyroTurnRight %s ["degrees"]
     resetYaw()
@@ -56,9 +64,7 @@ target: tcHOvPr4vjkS1VCg_7n-
       motorStartDirection(direction: counterclockwise, port: B)
     stopMotor(port: B)
   ----- Z$qVZU|;S1~9*NOs3#=h -----
-  (0 - )----- ]$Nrs+8Ym^YS=Kue1tSV -----
-  motorTurnForSpeed(port: E, speed: 75, degrees: 2000)
-  ----- _phVN1)H,~@*lWup.phb -----
+  (0 - )----- _phVN1)H,~@*lWup.phb -----
   def _GyroRampInit []
     [variable _GyroRampSpeed] = "0"
   ----- huI0[P*#tjwXc=sP^Hd] -----
