@@ -1,6 +1,7 @@
 target: Stage
 target: tcHOvPr4vjkS1VCg_7n-
-  ----- ,@TEflA`T;_`R)Zll%)Y -----
+  ----- +J*(9j.p}EH@dr0+u!KK -----
+  ([variable Foot] == "0")----- ,@TEflA`T;_`R)Zll%)Y -----
   def GyroMoveForward %s ["degrees"]
     setDegreesCounted(port: A, value: 0)
     resetYaw()
@@ -22,24 +23,35 @@ target: tcHOvPr4vjkS1VCg_7n-
       setMovementSpeed(speed: [variable _GyroRampSpeed])
   ----- AH0@Itd];NXRWao[wE*j -----
   when program starts:
+    setCenterButtonLight(color: 4)
+    playSound(sound: {"name":"Hydraulics Up","location":"hub","path":"/extra_files/Hydraulics Up"})
     GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "2345")
+    stopSound()
     GyroTurnLeft %s ["ps6|qDX7/ZypQ,1.q~?E"](ps6|qDX7/ZypQ,1.q~?E: "45")
     GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "1120")
     GyroTurnLeft %s ["ps6|qDX7/ZypQ,1.q~?E"](ps6|qDX7/ZypQ,1.q~?E: "40")
     GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "180")
     motorTurnForSpeed(port: E, speed: 75, degrees: -2000)
     setMovementSpeed(speed: 10)
+    [variable Foot] = orientation(yaw)
     move(direction: back, cm: 20)
     motorTurnForSpeed(port: E, speed: 75, degrees: 2000)
     GyroMoveForward %s ["lQWLg1Ntohz[{PQ^,34S"](lQWLg1Ntohz[{PQ^,34S: "200")
     GyroTurnRight %s ["%lB30BGW|Lr-#Y)]6@i("](%lB30BGW|Lr-#Y)]6@i(: "50")
-    setMovementSpeed(speed: 100)
+    setMovementSpeed(speed: 92)
     move(direction: back, degrees: 900)
-    GyroTurnRight %s ["%lB30BGW|Lr-#Y)]6@i("](%lB30BGW|Lr-#Y)]6@i(: "45")
+    beep(note: 84)
+    GyroTurnRight %s ["%lB30BGW|Lr-#Y)]6@i("](%lB30BGW|Lr-#Y)]6@i(: "40")
+    stopSound()
+    displayLEDImage(matrix: 9999999099000009000909990)
+    setMovementSpeed(speed: 91)
+    move(direction: back, degrees: 701)
+    GyroTurnLeft %s ["ps6|qDX7/ZypQ,1.q~?E"](ps6|qDX7/ZypQ,1.q~?E: "20")
     setMovementSpeed(speed: 100)
-    move(direction: back, degrees: 2500)
+    move(direction: back, degrees: 2000)
     stop(program)
-  ----- JOJjpQYoi-@?0,i$S2=? -----
+  ----- Aft0/?wAXWF%Cg,{H.Hp -----
+  (50 - (orientation(yaw) - 0))----- JOJjpQYoi-@?0,i$S2=? -----
   def GyroTurnLeft %s ["degrees"]
     resetYaw()
     _GyroRampInit []()
@@ -67,7 +79,8 @@ target: tcHOvPr4vjkS1VCg_7n-
   (0 - )----- _phVN1)H,~@*lWup.phb -----
   def _GyroRampInit []
     [variable _GyroRampSpeed] = "0"
-  ----- huI0[P*#tjwXc=sP^Hd] -----
+  ----- _we@SEcpMBIzYK@d^AAs -----
+  (([variable Foot] * [variable _GyroRampSpeed]) * ([variable Foot] * ([variable Foot] * [variable Foot])))----- huI0[P*#tjwXc=sP^Hd] -----
   def _GyroRampUp %s ["motor"]
     if ([variable _GyroRampSpeed] < [variable _GyroRampMaxSpeed]):
       _GyroRampSpeed = _GyroRampSpeed + 5
